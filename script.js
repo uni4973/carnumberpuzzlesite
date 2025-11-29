@@ -143,7 +143,7 @@ submit.addEventListener("click", () => {
     let num = quiz.value;
     let goal = Goal.value;
     if(isFinite(num) && num >= 1000 && num <= 9999 && Number.isInteger(Number(num))){
-        if(isFinite(goal) && goal != 0 && Number.isInteger(Number(goal))){
+        if(isFinite(goal) && Number.isInteger(Number(goal))){
             Answer.textContent = cal(num,goal);
         }
         else{
@@ -153,4 +153,5 @@ submit.addEventListener("click", () => {
     else{
         alert("4桁の整数を入力してください")
     }
+
 });
