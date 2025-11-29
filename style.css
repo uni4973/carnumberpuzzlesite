@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+        background-color: lightblue;
+    }
+}
+header{
+    background-color: yellow;
+    color: black;
+}
+main{
+    margin-top: 10rem;
+}
+
+#answerbox{
+    margin: 0 auto;
+    background-color: white;
+    width: 60rem;
+    height: 20rem;
+    margin-top: 10rem;
+}
+button{
+    margin-top: 3rem;
+    width: 200px;
+    height: 80px;
+    background-color: rgb(65, 102, 223);
+}
+#answer{
+    color: black;
+    text-align: center;
+}
