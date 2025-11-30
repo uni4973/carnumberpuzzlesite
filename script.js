@@ -114,6 +114,85 @@ function cal(nums,goal){
                                                 if(answer == goal){
                                                     return("(" + String(numbers[i]) + change(m) + String(numbers[j]) + ")" + change(n) + "(" + String(numbers[k]) + change(o) + String(numbers[l] + ")"));
                                                 }
+
+                                                if(n == 0){
+                                                    answer = numbers[j] + numbers[k]
+                                                }
+                                                else if(n == 1){
+                                                    answer = numbers[j] - numbers[k]
+                                                }
+                                                else if(n == 2){
+                                                    answer = numbers[j] * numbers[k]
+                                                }
+                                                else{
+                                                    answer = numbers[j] / numbers[k]
+                                                }
+                                                if(m == 0){
+                                                    answer = numbers[i] + answer
+                                                }
+                                                else if(m == 1){
+                                                    answer = numbers[i] - answer
+                                                }
+                                                else if(m == 2){
+                                                    answer = numbers[i] * answer
+                                                }
+                                                else{
+                                                    answer = numbers[i] / answer
+                                                }
+                                                if(o == 0){
+                                                    answer = answer + numbers[l]
+                                                }
+                                                else if(o == 1){
+                                                    answer = answer - numbers[l]
+                                                }
+                                                else if(o == 2){
+                                                    answer = answer * numbers[l]
+                                                }
+                                                else{
+                                                    answer = answer / numbers[l]
+                                                }
+                                                if(answer == goal){
+                                                    return("(" + String(numbers[i]) + change(m) + "(" + String(numbers[j]) + change(n) + String(numbers[k]) + "))" + change(o) + String(numbers[l]));
+                                                }
+
+                                                if(n == 0){
+                                                    answer = numbers[j] + numbers[k]
+                                                }
+                                                else if(n == 1){
+                                                    answer = numbers[j] - numbers[k]
+                                                }
+                                                else if(n == 2){
+                                                    answer = numbers[j] * numbers[k]
+                                                }
+                                                else{
+                                                    answer = numbers[j] / numbers[k]
+                                                }
+                                                if(o == 0){
+                                                    answer = answer + numbers[l]
+                                                }
+                                                else if(o == 1){
+                                                    answer = answer - numbers[l]
+                                                }
+                                                else if(o == 2){
+                                                    answer = answer * numbers[l]
+                                                }
+                                                else{
+                                                    answer = answer / numbers[l]
+                                                }if(m == 0){
+                                                    answer = numbers[i] + answer
+                                                }
+                                                else if(m == 1){
+                                                    answer = numbers[i] - answer
+                                                }
+                                                else if(m == 2){
+                                                    answer = numbers[i] * answer
+                                                }
+                                                else{
+                                                    answer = numbers[i] / answer
+                                                }
+                                                if(answer == goal){
+                                                    return( String(numbers[i]) + change(m) + "((" + String(numbers[j]) + change(n) + String(numbers[k]) + ")" + change(o) + String(numbers[l]) + ")");
+                                                }
                                             }
 
                                         }
@@ -153,5 +232,4 @@ submit.addEventListener("click", () => {
     else{
         alert("4桁の整数を入力してください")
     }
-
 });
